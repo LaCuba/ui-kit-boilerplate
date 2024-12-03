@@ -4,23 +4,38 @@
   "type": "module",
   "private": true,
   "exports": {
-    "./button": "./src/Button/index.ts",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    ".": {
+      "types": "./dist/types/common/index.d.ts",
+      "import": "./dist/common/index.js"
+    },
+    "./modals": {
+      "types": "./dist/types/modals/index.d.ts",
+      "import": "./dist/modals/index.js"
+    }
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "build": "tsx ./scripts/start.ts --clean --dts",
+    "dev": "tsx ./scripts/start.ts --dts --watch"
   },
   "devDependencies": {
-    "@turbo/gen": "^1.12.4",
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/node": "^20.11.24",
     "@types/react": "18.3.0",
     "@types/react-dom": "18.3.1",
+    "execa": "^9.5.1",
+    "fast-glob": "^3.3.2",
+    "rollup": "^4.28.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tsx": "^4.19.2",
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "react": "19.0.0-rc-5c56b873-20241107",
-    "react-dom": "19.0.0-rc-5c56b873-20241107"
+    "react-dom": "19.0.0-rc-5c56b873-20241107",
+    "sass": "^1.81.0"
   }
 }

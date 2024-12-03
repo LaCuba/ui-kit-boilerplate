@@ -20,7 +20,7 @@
     "isolatedModules": true,
     "rootDirs": ["."],
     "jsx": "preserve",
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types", "typings"]
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
