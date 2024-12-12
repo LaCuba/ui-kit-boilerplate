@@ -4,8 +4,8 @@
   "scripts": {
     "start:storybook": "turbo run preview --filter=storybook",
     "dev:ui-kit": "turbo run dev --parallel --filter=@repo/ui --filter=storybook",
-    "build:storybook": "turbo run build --filter=storybook",
-    "build:ui-kit": "turbo run build --filter=...@repo/ui"
+    "build:storybook": "turbo run build --filter=...storybook",
+    "build:ui-kit": "turbo run build --filter=@repo/ui"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

@@ -18,6 +18,8 @@
     "dev": "tsx ./scripts/start.ts --dts --watch"
   },
   "devDependencies": {
+    "react": "19.0.0-rc-5c56b873-20241107",
+    "react-dom": "19.0.0-rc-5c56b873-20241107",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
@@ -32,10 +34,12 @@
     "tsx": "^4.19.2",
     "typescript": "5.5.4"
   },
+  "peerDependencies": {
+    "react": "19.0.0-rc-5c56b873-20241107",
+    "react-dom": "19.0.0-rc-5c56b873-20241107"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
-    "react": "19.0.0-rc-5c56b873-20241107",
-    "react-dom": "19.0.0-rc-5c56b873-20241107",
     "sass": "^1.81.0"
   }
 }
